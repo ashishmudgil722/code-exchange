@@ -46,7 +46,7 @@ function Navbar() {
            </div>
             <div className = 'qHeader__Rem'>
                 <div className='qHeader__avtar'>
-                <Avatar onClick = {() => auth.signOut()} src = {user.photo}/>
+                <Avatar/>
                 </div>
             <LanguageIcon />
             <Button>Add Question</Button>

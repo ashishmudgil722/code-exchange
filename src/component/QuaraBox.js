@@ -4,12 +4,12 @@ import '../css/QuaraBox.css';
 import {selectUser} from "../features/userSlice";
 
 function QuaraBox() {
-    const user = useSelector(selectUser);
+    // const user = useSelector(selectUser);
     return (
         <div className="quaraBox">
             <div className="quaraBox__info">
-                <Avatar src= {user.photo} />
-                <h5>{user.displayName}</h5>
+                <Avatar/>
+                <h5>Ashish</h5>
             </div>
             <div className="quaraBox__quara">
                 <p>What is your question or link?</p>

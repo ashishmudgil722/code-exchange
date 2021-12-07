@@ -30,8 +30,8 @@ function App() {
   return (
     <div className="App">
       {
-        user ? (<Quara />) : (<Login />)
-        // <Quara />
+        // user ? (<Quara />) : (<Login />)
+        <Quara />
         // <Login />
       }
       
