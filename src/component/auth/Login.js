@@ -4,36 +4,36 @@ import { auth , provider } from "../../firebase";
 import { ArrowForwardIosIcon } from '@material-ui/icons/ArrowForwardIos';
 
 
+// const [email , setEmail] = useState("");
+//         const [password, setPassword] = useState("");
+
+//         const signIn = () => {
+//             auth.signInWithPopup(provider).catch((e) => alert(e.message));
+
+//             console.log(auth);
+//         };
+//         const handleLogin = (e) => {
+//             e.preventDefault();
+//             auth.signInWithEmailAndPassword(email,password).then((auth) => {
+//                 console.log(auth);
+//             }).catch((e) => alert(e.message));
+//             setEmail("");
+//             setPassword("");
+//         };
+//         const handleRegister = (e) => {
+//             e.preventDefault();
+//             auth.createUserWithEmailAndPassword(email,password).then((auth) => {
+
+//                 if(auth){
+//                     console.log(auth);
+//                 }
+//             }).catch((e) => alert(e.message));
+
+//             setEmail("");
+//             setPassword("");
+//         };
+
 function Login() {
-
-        const [email , setEmail] = useState("");
-        const [password, setPassword] = useState("");
-
-        const signIn = () => {
-            auth.signInWithPopup(provider).catch((e) => alert(e.message));
-
-            console.log(auth);
-        };
-        const handleLogin = (e) => {
-            e.preventDefault();
-            auth.signInWithEmailAndPassword(email,password).then((auth) => {
-                console.log(auth);
-            }).catch((e) => alert(e.message));
-            setEmail("");
-            setPassword("");
-        };
-        const handleRegister = (e) => {
-            e.preventDefault();
-            auth.createUserWithEmailAndPassword(email,password).then((auth) => {
-
-                if(auth){
-                    console.log(auth);
-                }
-            }).catch((e) => alert(e.message));
-
-            setEmail("");
-            setPassword("");
-        };
     return (
         <div className = "login">
             <div className="login__container">
@@ -44,7 +44,7 @@ function Login() {
                 <div className="login__desc">
                     <p>A Place to Share Knowledge and better understand the world</p>
                     <p style = {{ color: "royalblue" , fontSize: "25px" }}>
-                        HandCrafted with ♥ {" "}
+                        HandCrafted with heart
                     </p>
                     <h3>code-Excange App</h3>
                 </div>
@@ -52,7 +52,7 @@ function Login() {
                     <div className="login__auth1Options">
                         <div className="login__auth1Option">
                             <img className ="login__googleauth1" src="https://media-public.canva.com/MADnBiAubGA/3/screen.svg" alt="xyz" />
-                            <p onClick = {signIn}>Continue with Google</p>
+                            <p>Continue with Google</p>
                         </div>
                         <div className="login__auth1Option">
                             <img className ="login__googleauth1" src="https://1000logos.net/wp-content/uploads/2016/11/Facebook-logo-500x350.png" alt="xyz" />
@@ -62,7 +62,7 @@ function Login() {
                             <p>
                                 <span style= {{ color:"blue" , cursor : "pointer"}}>Sign Up with Email</span>
                                 . By continuing you indicate that you have read and agree to code-Exchange's 
-                                <span style={{color: "blue" , cursor: "pointer"}}>Terms of Services {" "}</span>
+                                <span style={{color: "blue" , cursor: "pointer"}}>Terms of Services</span>
                                 .
                             </p>
                         </div>
@@ -74,22 +74,18 @@ function Login() {
                         <div className="login__inputFields">
                             <div className="login__inputField">
                                 <input
-                                value ={email}
-                                onChange ={(e) => setEmail(e.target.value)}
                                 type="text" placeholder="Email" />
                             </div>
                             <div className="login__inputField">
                             <input
-                            value = {password}
-                            onChange = {(e) => setPassword(e.target.value)}
                             type="password" placeholder="Password" />
                         </div>
                         </div>
                         <div className="login__forgButt">
                             <small>Forgot Password?</small>
-                            <button type = "submit" onClick = {handleLogin}>Login</button>
+                            <button type = "submit">Login</button>
                         </div>
-                        <button onClick={handleRegister}>Register</button>
+                        <button>Register</button>
                     </div>
                 </div>
                 <div className="login__lang">

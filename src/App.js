@@ -6,33 +6,36 @@ import {logout,login, selectUser} from "./features/userSlice";
 import Login from './component/auth/Login';
 import { auth } from './firebase';
 
+
+// const dispatch = useDispatch();
+
+//   useEffect(() => {
+//     auth.onAuthStateChanged((authUser) =>{
+//       if(authUser){
+//         dispatch(login({
+//           uid: authUser.uid,
+//           photo: authUser.photoUPL,
+//           displayName: authUser.displayName,
+//           email: authUser.email
+//         }));
+//       console.log(authUser);
+//       } else {
+//         dispatch(logout());
+//       }
+//     });
+//  }, [dispatch]);
+
 function App() {
 
   const user = useSelector(selectUser);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    auth.onAuthStateChanged((authUser) =>{
-      if(authUser){
-        dispatch(login({
-          uid: authUser.uid,
-          photo: authUser.photoUPL,
-          displayName: authUser.displayName,
-          email: authUser.email
-        }));
-      console.log(authUser);
-      } else {
-        dispatch(logout());
-      }
-    });
- }, [dispatch]);
+  
 
   return (
     <div className="App">
       {
         // user ? (<Quara />) : (<Login />)
-        <Quara />
-        // <Login />
+        // <Quara />
+        <Login />
       }
       
           </div>
